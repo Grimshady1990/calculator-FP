@@ -4,13 +4,15 @@ body {
 }
 
 #main-container {
-    height: 500px;
+    height: 420px;
     width: 300px;
     background-color: darkgray;
     display:flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 10px;
+    padding-top: 40px;
+    gap: 50px;
+    
 }
 
 #display {
@@ -27,7 +29,33 @@ body {
 }
 
 #operators {
-    background-color: bisque;
+    
     display: flex;
     flex-direction: column;
+    gap: 10px;
+}
+
+#operators-digits {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    
+    
+}
+
+#digit-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.button {
+    height: 50px;
+    width: 50px;
+}
+
+.digits {
+    display: flex;
+    gap: 20px;
 }
