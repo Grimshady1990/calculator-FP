@@ -7,4 +7,20 @@ body {
     height: 500px;
     width: 300px;
     background-color: darkgray;
+    display:flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+#display {
+    width: 250px;
+    height: 70px;
+    background-color: darkslategrey;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#display-text {
+    color: lightgray;
 }
