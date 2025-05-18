@@ -1,3 +1,38 @@
+// CREATE a variable called `numOne` initialized to null.
+let numOne = 100;
+   
+// CREATE a variable called `numTwo` initialized to null.
+let numTwo = 25;
+
+// CREATE a variable called `op` initialized to null.
+let operator = "*";
+
+// CREATE a function called `operate()`.
+function operate() {
+    // IF/ELSE statement that choses a operation function based on the chosen operator
+    if (operator === "+") {
+        // ACCEPT the inputs of the two numbers and the operator that has been selected
+        add(numOne, numTwo);
+    }
+    else if (operator === "-") {
+        // ACCEPT the inputs of the two numbers and the operator that has been selected
+        sub(numOne, numTwo);
+    }
+    else if (operator === "*") {
+        // ACCEPT the inputs of the two numbers and the operator that has been selected
+        multi(numOne, numTwo);
+    }
+    else if (operator === "/") {
+        // ACCEPT the inputs of the two numbers and the operator that has been selected
+        div(numOne, numTwo);
+    }
+}
+   
+
+
+
+
+
 // CREATE a function called `add()` that takes two integers as parameters.
 function add(n1, n2) {
 // CREATE functionality that takes the two parameters and adds them together.
@@ -35,3 +70,4 @@ add(200, 200);
 sub(1000, 600);
 multi(80, 5);
 div(1200, 3);
+operate();
