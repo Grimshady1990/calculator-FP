@@ -1,8 +1,8 @@
 // CREATE a variable called `numOne` initialized to null.
-let numOne = 100;
+let numOne = null;
    
 // CREATE a variable called `numTwo` initialized to null.
-let numTwo = 25;
+let numTwo = null;
 
 // CREATE a variable called `op` initialized to null.
 let operator = "*";
@@ -65,7 +65,15 @@ function div(n1, n2) {
     console.log(total);
 }
 
-const butOne = addEventListener
+let showDigits = document.querySelector("#display-text");
+
+const butOne = document.querySelector("#one");
+butOne.addEventListener("click", buttonPush);
+
+function buttonPush(){
+    showDigits.textContent += 1;
+    
+}
 
 // CALL functions
 add(200, 200);
