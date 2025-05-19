@@ -67,11 +67,21 @@ function div(n1, n2) {
 
 let showDigits = document.querySelector("#display-text");
 
+
 const butOne = document.querySelector("#one");
 butOne.addEventListener("click", buttonPush);
 
+let displayLength = showDigits.textContent.length;
+
+
 function buttonPush(){
+    if (displayLength < 9) {
     showDigits.textContent += 1;
+    displayLength++; 
+    }
+    else {
+        return;
+    }
     
 }
 
