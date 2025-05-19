@@ -65,6 +65,8 @@ function div(n1, n2) {
     console.log(total);
 }
 
+const butOne = addEventListener
+
 // CALL functions
 add(200, 200);
 sub(1000, 600);
