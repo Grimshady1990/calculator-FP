@@ -63,6 +63,7 @@ let operator = null;
 // CREATE a function called `operate()`.
 function operate() {
     // IF/ELSE statement that choses a operation function based on the chosen operator
+    
     if (operator === "+") {
         // ACCEPT the inputs of the two numbers and the operator that has been selected
         add(numOne, numTwo);
@@ -94,32 +95,56 @@ function operate() {
 function add(n1, n2) {
 // CREATE functionality that takes the two parameters and adds them together.
 // RETURN the results in the console.
-    let total = +n1 + +n2;
-    showDigits.textContent = total.toString().slice(0, 9);    
+    if (numOne === "" && numTwo === "") {
+        showDigits.textContent = "";
+    }
+    else {
+        let total = +n1 + +n2;
+        showDigits.textContent = total.toString().slice(0, 9); 
+        console.log(numOne);
+    }   
 } 
 
 // CREATE a function called `sub()` that takes two integers as parameters.
 function sub(n1, n2) {
 // CREATE functionality that takes the two parameters and subtracts them.
 // RETURN the results in the console.
-    let total = n1 - n2;
-    showDigits.textContent = total.toString().slice(0, 9);
+    if (numOne === "" && numTwo === "") {
+        showDigits.textContent = "";
+    }
+    else {
+        let total = +n1 - +n2;
+        showDigits.textContent = total.toString().slice(0, 9); 
+        console.log(numOne);
+    }
 }
 
 // CREATE a function called `multi()` that takes two integers as parameters.
 function multi(n1, n2) {
 // CREATE functionality that takes the two parameters and multiplies them together.
 // RETURN the results in the console.
-    let total = n1 * n2;
-    showDigits.textContent = total.toString().slice(0, 9);
+    if (numOne === "" && numTwo === "") {
+        showDigits.textContent = "";
+    }
+    else {
+        let total = +n1 * +n2;
+        showDigits.textContent = total.toString().slice(0, 9); 
+        console.log(numOne);
+    }
 }
 
 // CREATE a function called `div()` that takes two integers as parameters.
 function div(n1, n2) {
 // CREATE functionality that takes the two parameters and divides them.
 // RETURN the results in the console.
-    let total = n1 / n2;
-    showDigits.textContent = total.toString().slice(0, 9);
+    if (numOne === "" && numTwo === "") {
+        showDigits.textContent = "";
+    }
+    else {
+        let total = +n1 / +n2;
+        showDigits.textContent = total.toString().slice(0, 9); 
+        console.log(numOne);
+    }
 }
 
 
@@ -420,7 +445,7 @@ function buttonPushC(){
 console.log("Operator: " + operator);
 function buttonPushAdd() {
 
-    if (operator !== null){
+    if (operator !== null && numTwo !== null){
         numTwo = showDigits.textContent;
         operate();
         numOne = showDigits.textContent;
@@ -434,14 +459,14 @@ function buttonPushAdd() {
     
     numOne = showDigits.textContent;
     operator = "+"
-    showDigits.textContent = "";
+    showDigits.textContent = numOne;
     displayLength = 0;
     console.log("Operator: " + operator);
     
 }
 
 function buttonPushSub() {
-    if (operator !== null){
+    if (operator !== null && numTwo !== null){
         numTwo = showDigits.textContent;
         
         operate();
@@ -455,14 +480,14 @@ function buttonPushSub() {
     }
     numOne = showDigits.textContent;
     operator = "-"
-    showDigits.textContent = "";
+    showDigits.textContent = numOne;
     displayLength = 0;
     console.log(numOne);
 }
 
 function buttonPushMulti() {
 
-    if (operator !== null){
+    if (operator !== null && numTwo !== null){
         numTwo = showDigits.textContent;
         operate();
         numOne = showDigits.textContent;
@@ -476,13 +501,13 @@ function buttonPushMulti() {
 
     numOne = showDigits.textContent;
     operator = "*"
-    showDigits.textContent = "";
+    showDigits.textContent = numOne;
     displayLength = 0;
     console.log(numOne);
 }
 
 function buttonPushDivide() {
-    if (operator !== null){
+    if (operator !== null && numTwo !== null){
         numTwo = showDigits.textContent;
         operate();
         numOne = showDigits.textContent;
@@ -496,12 +521,15 @@ function buttonPushDivide() {
 
     numOne = showDigits.textContent;
     operator = "/"
-    showDigits.textContent = "";
+    showDigits.textContent = numOne;
     displayLength = 0;
     console.log(numOne);
 }
 
 function buttonPushEquals() {
+    if (numTwo === null) {
+        return;
+    }
     numTwo = showDigits.textContent;
     operate();
     numOne = null;
