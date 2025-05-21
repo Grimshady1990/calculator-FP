@@ -62,6 +62,8 @@ let operator = null;
 
 let decimal = null;
 
+let zero = null;
+
 // CREATE a function called `operate()`.
 function operate() {
     // IF/ELSE statement that choses a operation function based on the chosen operator
@@ -156,7 +158,10 @@ const butOne = document.querySelector("#one");
 butOne.addEventListener("click", buttonPush1);
 
 function buttonPush1(){
-    if (operator !== null && numOne !== null && numTwo === null){
+    if (showDigits.textContent === "0") {
+        return;
+    }
+    else if (operator !== null && numOne !== null && numTwo === null){
         displayLength = 0;
         showDigits.textContent = "";
         showDigits.textContent += 1;
@@ -166,7 +171,7 @@ function buttonPush1(){
     }
     else if (operator === null && numOne === null && numTwo === null ) {
         displayLength = 0;
-        showDigits.textContent = "";
+        //showDigits.textContent = "";
         showDigits.textContent += 1;
         numOne = showDigits.textContent;
         displayLength++;
@@ -189,7 +194,10 @@ function buttonPush1(){
 
 
 function buttonPush2(){
-    if (operator !== null && numOne !== null && numTwo === null){
+    if (showDigits.textContent === "0") {
+        return;
+    }
+    else if (operator !== null && numOne !== null && numTwo === null){
         displayLength = 0;
         showDigits.textContent = "";
         showDigits.textContent += 2;
@@ -199,7 +207,7 @@ function buttonPush2(){
     }
     else if (operator === null && numOne === null && numTwo === null ) {
         displayLength = 0;
-        showDigits.textContent = "";
+        //showDigits.textContent = "";
         showDigits.textContent += 2;
         numOne = showDigits.textContent;
         displayLength++;
@@ -217,7 +225,10 @@ function buttonPush2(){
 }
 
 function buttonPush3(){
-    if (operator !== null && numOne !== null && numTwo === null){
+    if (showDigits.textContent === "0") {
+        return;
+    }
+    else if (operator !== null && numOne !== null && numTwo === null){
         displayLength = 0;
         showDigits.textContent = "";
         showDigits.textContent += 3;
@@ -227,7 +238,7 @@ function buttonPush3(){
     }
     else if (operator === null && numOne === null && numTwo === null ) {
         displayLength = 0;
-        showDigits.textContent = "";
+        //showDigits.textContent = "";
         showDigits.textContent += 3;
         numOne = showDigits.textContent;
         displayLength++;
@@ -245,7 +256,10 @@ function buttonPush3(){
 }
 
 function buttonPush4(){
-    if (operator !== null && numOne !== null && numTwo === null){
+    if (showDigits.textContent === "0") {
+        return;
+    }
+    else if (operator !== null && numOne !== null && numTwo === null){
         displayLength = 0;
         showDigits.textContent = "";
         showDigits.textContent += 4;
@@ -255,7 +269,7 @@ function buttonPush4(){
     }
     else if (operator === null && numOne === null && numTwo === null ) {
         displayLength = 0;
-        showDigits.textContent = "";
+        //showDigits.textContent = "";
         showDigits.textContent += 4;
         numOne = showDigits.textContent;
         displayLength++;
@@ -273,7 +287,10 @@ function buttonPush4(){
 }
 
 function buttonPush5(){
-    if (operator !== null && numOne !== null && numTwo === null){
+    if (showDigits.textContent === "0") {
+        return;
+    }
+    else if (operator !== null && numOne !== null && numTwo === null){
         displayLength = 0;
         showDigits.textContent = "";
         showDigits.textContent += 5;
@@ -283,7 +300,7 @@ function buttonPush5(){
     }
     else if (operator === null && numOne === null && numTwo === null ) {
         displayLength = 0;
-        showDigits.textContent = "";
+        //showDigits.textContent = "";
         showDigits.textContent += 5;
         numOne = showDigits.textContent;
         displayLength++;
@@ -301,7 +318,10 @@ function buttonPush5(){
 }
 
 function buttonPush6(){
-    if (operator !== null && numOne !== null && numTwo === null){
+    if (showDigits.textContent === "0") {
+        return;
+    }
+    else if (operator !== null && numOne !== null && numTwo === null){
         displayLength = 0;
         showDigits.textContent = "";
         showDigits.textContent += 6;
@@ -311,7 +331,7 @@ function buttonPush6(){
     }
     else if (operator === null && numOne === null && numTwo === null ) {
         displayLength = 0;
-        showDigits.textContent = "";
+        //showDigits.textContent = "";
         showDigits.textContent += 6;
         numOne = showDigits.textContent;
         displayLength++;
@@ -329,7 +349,10 @@ function buttonPush6(){
 }
 
 function buttonPush7(){
-    if (operator !== null && numOne !== null && numTwo === null){
+    if (showDigits.textContent === "0") {
+        return;
+    }
+    else if (operator !== null && numOne !== null && numTwo === null){
         displayLength = 0;
         showDigits.textContent = "";
         showDigits.textContent += 7;
@@ -339,7 +362,7 @@ function buttonPush7(){
     }
     else if (operator === null && numOne === null && numTwo === null ) {
         displayLength = 0;
-        showDigits.textContent = "";
+        //showDigits.textContent = "";
         showDigits.textContent += 7;
         numOne = showDigits.textContent;
         displayLength++;
@@ -357,7 +380,10 @@ function buttonPush7(){
 }
 
 function buttonPush8(){
-    if (operator !== null && numOne !== null && numTwo === null){
+    if (showDigits.textContent === "0") {
+        return;
+    }
+    else if (operator !== null && numOne !== null && numTwo === null){
         displayLength = 0;
         showDigits.textContent = "";
         showDigits.textContent += 8;
@@ -367,7 +393,7 @@ function buttonPush8(){
     }
     else if (operator === null && numOne === null && numTwo === null ) {
         displayLength = 0;
-        showDigits.textContent = "";
+        //showDigits.textContent = "";
         showDigits.textContent += 8;
         numOne = showDigits.textContent;
         displayLength++;
@@ -385,7 +411,10 @@ function buttonPush8(){
 }
 
 function buttonPush9(){
-    if (operator !== null && numOne !== null && numTwo === null){
+    if (showDigits.textContent === "0") {
+        return;
+    }
+    else if (operator !== null && numOne !== null && numTwo === null){
         displayLength = 0;
         showDigits.textContent = "";
         showDigits.textContent += 9;
@@ -395,7 +424,7 @@ function buttonPush9(){
     }
     else if (operator === null && numOne === null && numTwo === null ) {
         displayLength = 0;
-        showDigits.textContent = "";
+        //showDigits.textContent = "";
         showDigits.textContent += 9;
         numOne = showDigits.textContent;
         displayLength++;
@@ -413,8 +442,23 @@ function buttonPush9(){
 }
 
 function buttonPush0(){
-    if (displayLength === 0) {
+    if (showDigits.textContent === "0") {
         return;
+    }
+    else if (operator !== null && numOne !== null && numTwo === null){
+        displayLength = 0;
+        showDigits.textContent = "";
+        showDigits.textContent += 0;
+        numTwo = showDigits.textContent;
+        displayLength++;
+        
+    }
+    else if (operator !== null && numOne !== null && numTwo === null){
+        displayLength = 0;
+        showDigits.textContent = "";
+        showDigits.textContent += 0;
+        numTwo = showDigits.textContent;
+        displayLength++;
     }
     else if (displayLength < 9) {
     showDigits.textContent += 0;
@@ -432,6 +476,7 @@ function buttonPushC(){
     numOne = null;
     numTwo = null;
     operator = null;
+    decimal = null;
     displayLength = 0;
 }
 
@@ -542,12 +587,27 @@ function buttonPushEquals() {
     if (numTwo === null) {
         return;
     }
-    numTwo = showDigits.textContent;
-    operate();
-    numOne = null;
-    operator = null;
-    numTwo = null;
+    else if (operator !== null && numTwo !== null){
+        numTwo = showDigits.textContent;
+        operate();
+        numOne = showDigits.textContent;
+        numTwo = null;
+        displayLength = 0;
+        operator = "=";
+        decimal = null;
+        
+        return;
+
+    }
+
+    numOne = showDigits.textContent;
+    operator = "=";
+    showDigits.textContent = numOne;
+    displayLength = 0;
     decimal = null;
+    console.log(numOne);
+    
+        
 }
 
 console.log(displayLength);
