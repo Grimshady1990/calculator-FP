@@ -30,8 +30,8 @@ butZero.addEventListener("click", buttonPush0);
 const butCancel = document.querySelector("#cancel");
 butCancel.addEventListener("click", buttonPushC);
 
-/* const butDecimal = document.querySelector("#decimal");
-butOne.addEventListener("click", buttonPushD); */
+const butDecimal = document.querySelector("#decimal");
+butDecimal.addEventListener("click", buttonPushD);
 
 const butAdd = document.querySelector("#add");
 butAdd.addEventListener("click", buttonPushAdd);
@@ -59,6 +59,8 @@ let numTwo = null;
 
 // CREATE a variable called `op` initialized to null.
 let operator = null;
+
+let decimal = null;
 
 // CREATE a function called `operate()`.
 function operate() {
@@ -433,15 +435,17 @@ function buttonPushC(){
     displayLength = 0;
 }
 
-/*function buttonPushD(){
-    if (displayLength < 9) {
-    showDigits.textContent += 1;
-    displayLength++; 
+function buttonPushD(){
+    if (decimal !== "." && displayLength !== 0) {
+        decimal = ".";
+        showDigits.textContent += ".";
+        displayLength++; 
     }
     else {
         return;
     }
-    */
+}
+    
 console.log("Operator: " + operator);
 function buttonPushAdd() {
 
@@ -452,6 +456,7 @@ function buttonPushAdd() {
         numTwo = null;
         displayLength = 0;
         operator = "+";
+        decimal = null;
         
         return;
 
@@ -461,6 +466,7 @@ function buttonPushAdd() {
     operator = "+"
     showDigits.textContent = numOne;
     displayLength = 0;
+    decimal = null;
     console.log("Operator: " + operator);
     
 }
@@ -474,6 +480,7 @@ function buttonPushSub() {
         numTwo = null;
         displayLength = 0;
         operator = "-";
+        decimal = null;
         
         return;
 
@@ -482,6 +489,7 @@ function buttonPushSub() {
     operator = "-"
     showDigits.textContent = numOne;
     displayLength = 0;
+    decimal = null;
     console.log(numOne);
 }
 
@@ -494,6 +502,7 @@ function buttonPushMulti() {
         numTwo = null;
         displayLength = 0;
         operator = "*";
+        decimal = null;
         
         return;
 
@@ -503,6 +512,7 @@ function buttonPushMulti() {
     operator = "*"
     showDigits.textContent = numOne;
     displayLength = 0;
+    decimal = null;
     console.log(numOne);
 }
 
@@ -514,6 +524,7 @@ function buttonPushDivide() {
         numTwo = null;
         displayLength = 0;
         operator = "/";
+        decimal = null;
         
         return;
 
@@ -523,6 +534,7 @@ function buttonPushDivide() {
     operator = "/"
     showDigits.textContent = numOne;
     displayLength = 0;
+    decimal = null;
     console.log(numOne);
 }
 
@@ -535,6 +547,7 @@ function buttonPushEquals() {
     numOne = null;
     operator = null;
     numTwo = null;
+    decimal = null;
 }
 
 console.log(displayLength);
