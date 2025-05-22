@@ -1,5 +1,203 @@
 let showDigits = document.querySelector("#display-text");
 
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+
+    if (keyName === "1") {
+      buttonPush1();
+      return;
+    }
+});
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+
+    if (keyName === "2") {
+      buttonPush2();
+      return;
+    }
+});
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+
+    if (keyName === "3") {
+      buttonPush3();
+      return;
+    }
+});
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+
+    if (keyName === "4") {
+      buttonPush4();
+      return;
+    }
+});
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+
+    if (keyName === "5") {
+      buttonPush5();
+      return;
+    }
+});
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+
+    if (keyName === "6") {
+      buttonPush6();
+      return;
+    }
+});
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+
+    if (keyName === "7") {
+      buttonPush7();
+      return;
+    }
+});
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+
+    if (keyName === "8") {
+      buttonPush8();
+      return;
+    }
+});
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+
+    if (keyName === "9") {
+      buttonPush9();
+      return;
+    }
+});
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+
+    if (keyName === "0") {
+      buttonPush0();
+      return;
+    }
+});
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+
+    if (keyName === "+") {
+      buttonPushAdd();
+      return;
+    }
+});
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+
+    if (keyName === "-") {
+      buttonPushSub();
+      return;
+    }
+});
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+
+    if (keyName === "*") {
+      buttonPushMulti();
+      return;
+    }
+});
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+
+    if (keyName === "/") {
+      buttonPushDivide();
+      return;
+    }
+});
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+
+    if (keyName === "Enter") {
+      buttonPushEquals();
+      return;
+    }
+});
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+
+    if (keyName === "Backspace") {
+      buttonPushBackspace();
+      return;
+    }
+});
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+
+    if (keyName === "Delete") {
+      buttonPushC();
+      return;
+    }
+});
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+    const keyName = event.key;
+
+    if (keyName === ".") {
+      buttonPushD();
+      return;
+    }
+});
+
 const butOne = document.querySelector("#one");
 butOne.addEventListener("click", buttonPush1);
 butOne.addEventListener("click", buttonPush1);
