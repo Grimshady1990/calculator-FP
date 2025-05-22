@@ -169,16 +169,20 @@ showDigitsIndex = showDigits.textContent.toString().split('').slice(-1).join('')
     if (answer === true || displayLength <= 0){
         return;
     }
-    else if (answer === false){
+    else if (answer === false && showDigitsIndex !== "."){
         
         showDigits.textContent = showDigits.textContent.toString().split('').slice(0, -1).join('');
         displayLength--;
         console.log(displayLength);
         console.log(showDigitsIndex);
     }
-    else if (showDigitsIndex === "."){
+    else if (answer === false && showDigitsIndex === "."){
         decimal = null;
-    }
+        showDigits.textContent = showDigits.textContent.toString().split('').slice(0, -1).join('');
+        displayLength--;
+        console.log(displayLength);
+        console.log(showDigitsIndex);
+}
 }
 
 function buttonPush1(){
