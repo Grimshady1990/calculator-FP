@@ -4,7 +4,7 @@ body {
 }
 
 #main-container {
-    height: 420px;
+    height: 440px;
     width: 300px;
     background-color: darkgray;
     display:flex;
@@ -20,7 +20,7 @@ body {
 
 #display {
     width: 250px;
-    height: 100px;
+    height: 200px;
     background-color: darkslategrey;
     display:flex;
     justify-content: flex-start;
@@ -30,6 +30,7 @@ body {
 #display-text {
     color: lightgray;
     font-size: 50px;
+    margin: 0%;
 }
 
 #operators {
