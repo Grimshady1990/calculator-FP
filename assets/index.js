@@ -940,7 +940,10 @@ function buttonPushDivide() {
 }
 
 function buttonPushEquals() {
-    if (numTwo === null) {
+    if (numTwo === null || operator === "=") {
+        console.log("op =" + operator);
+        console.log("n1 =" + numOne);
+        console.log("n2 =" + numTwo);
         return;
     }
     else if (operator !== null && numTwo !== null){
@@ -952,6 +955,11 @@ function buttonPushEquals() {
         displayLength = 0;
         operator = "=";
         decimal = null;
+
+        console.log("op =" + operator);
+
+        console.log("n1 =" + numOne);
+        console.log("n2 =" + numTwo);
         
         return;
 
@@ -963,6 +971,9 @@ function buttonPushEquals() {
     displayLength = 0;
     decimal = null;
     console.log(numOne);
+    console.log("op =" + operator);
+    console.log("n1 =" + numOne);
+    console.log("n2 =" + numTwo);
     
         
 }
