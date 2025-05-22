@@ -1,5 +1,9 @@
 let showDigits = document.querySelector("#display-text");
 
+const butOne = document.querySelector("#one");
+butOne.addEventListener("click", buttonPush1);
+butOne.addEventListener("click", buttonPush1);
+
 const butTwo = document.querySelector("#two");
 butTwo.addEventListener("click", buttonPush2);
 
@@ -155,13 +159,13 @@ function div(n1, n2) {
 }
 
 
+let showDigitsIndex = null; 
 
 
-const butOne = document.querySelector("#one");
-butOne.addEventListener("click", buttonPush1);
+
 
 function buttonPushBackspace() {
-
+showDigitsIndex = showDigits.textContent.toString().split('').slice(-1).join('');
     if (answer === true || displayLength <= 0){
         return;
     }
@@ -170,6 +174,10 @@ function buttonPushBackspace() {
         showDigits.textContent = showDigits.textContent.toString().split('').slice(0, -1).join('');
         displayLength--;
         console.log(displayLength);
+        console.log(showDigitsIndex);
+    }
+    else if (showDigitsIndex === "."){
+        decimal = null;
     }
 }
 
