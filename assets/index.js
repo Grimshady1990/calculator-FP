@@ -384,8 +384,19 @@ showDigitsIndex = showDigits.textContent.toString().split('').slice(-1).join('')
 }
 
 function buttonPush1(){
-    if (showDigits.textContent === "0") {
+    if (showDigits.textContent === "0" && operator === null) {
         return;
+    }
+    
+    else if (operator !== null && showDigits.textContent === "0")
+    {
+        answer = false
+        displayLength = 0;
+        showDigits.textContent = "";
+        showDigits.textContent += 1;
+        numTwo = showDigits.textContent;
+        displayLength++;
+        
     }
     else if (operator !== null && numOne !== null && numTwo === null){
         answer = false;
@@ -435,8 +446,19 @@ function buttonPush1(){
 
 
 function buttonPush2(){
-    if (showDigits.textContent === "0") {
+    if (showDigits.textContent === "0" && operator === null) {
         return;
+    }
+    
+    else if (operator !== null && showDigits.textContent === "0")
+    {
+        answer = false
+        displayLength = 0;
+        showDigits.textContent = "";
+        showDigits.textContent += 2;
+        numTwo = showDigits.textContent;
+        displayLength++;
+        
     }
     else if (operator !== null && numOne !== null && numTwo === null){
         answer = false
@@ -479,8 +501,19 @@ function buttonPush2(){
 }
 
 function buttonPush3(){
-    if (showDigits.textContent === "0") {
+    if (showDigits.textContent === "0" && operator === null) {
         return;
+    }
+    
+    else if (operator !== null && showDigits.textContent === "0")
+    {
+        answer = false
+        displayLength = 0;
+        showDigits.textContent = "";
+        showDigits.textContent += 3;
+        numTwo = showDigits.textContent;
+        displayLength++;
+        
     }
     else if (operator !== null && numOne !== null && numTwo === null){
         answer = false
@@ -523,8 +556,19 @@ function buttonPush3(){
 }
 
 function buttonPush4(){
-    if (showDigits.textContent === "0") {
+    if (showDigits.textContent === "0" && operator === null) {
         return;
+    }
+    
+    else if (operator !== null && showDigits.textContent === "0")
+    {
+        answer = false
+        displayLength = 0;
+        showDigits.textContent = "";
+        showDigits.textContent += 4;
+        numTwo = showDigits.textContent;
+        displayLength++;
+        
     }
     else if (operator !== null && numOne !== null && numTwo === null){
         answer = false
@@ -567,8 +611,19 @@ function buttonPush4(){
 }
 
 function buttonPush5(){
-    if (showDigits.textContent === "0") {
+    if (showDigits.textContent === "0" && operator === null) {
         return;
+    }
+    
+    else if (operator !== null && showDigits.textContent === "0")
+    {
+        answer = false
+        displayLength = 0;
+        showDigits.textContent = "";
+        showDigits.textContent += 5;
+        numTwo = showDigits.textContent;
+        displayLength++;
+        
     }
     else if (operator !== null && numOne !== null && numTwo === null){
         answer = false
@@ -611,8 +666,19 @@ function buttonPush5(){
 }
 
 function buttonPush6(){
-    if (showDigits.textContent === "0") {
+    if (showDigits.textContent === "0" && operator === null) {
         return;
+    }
+    
+    else if (operator !== null && showDigits.textContent === "0")
+    {
+        answer = false
+        displayLength = 0;
+        showDigits.textContent = "";
+        showDigits.textContent += 6;
+        numTwo = showDigits.textContent;
+        displayLength++;
+        
     }
     else if (operator !== null && numOne !== null && numTwo === null){
         answer = false
@@ -655,8 +721,19 @@ function buttonPush6(){
 }
 
 function buttonPush7(){
-    if (showDigits.textContent === "0") {
+    if (showDigits.textContent === "0" && operator === null) {
         return;
+    }
+    
+    else if (operator !== null && showDigits.textContent === "0")
+    {
+        answer = false
+        displayLength = 0;
+        showDigits.textContent = "";
+        showDigits.textContent += 7;
+        numTwo = showDigits.textContent;
+        displayLength++;
+        
     }
     else if (operator !== null && numOne !== null && numTwo === null){
         answer = false
@@ -699,8 +776,19 @@ function buttonPush7(){
 }
 
 function buttonPush8(){
-    if (showDigits.textContent === "0") {
+    if (showDigits.textContent === "0" && operator === null) {
         return;
+    }
+    
+    else if (operator !== null && showDigits.textContent === "0")
+    {
+        answer = false
+        displayLength = 0;
+        showDigits.textContent = "";
+        showDigits.textContent += 8;
+        numTwo = showDigits.textContent;
+        displayLength++;
+        
     }
     else if (operator !== null && numOne !== null && numTwo === null){
         answer = false
@@ -743,10 +831,22 @@ function buttonPush8(){
 }
 
 function buttonPush9(){
-    if (showDigits.textContent === "0") {
+    if (showDigits.textContent === "0" && operator === null) {
         return;
     }
-    else if (operator !== null && numOne !== null && numTwo === null){
+    
+    else if (operator !== null && showDigits.textContent === "0")
+    {
+        answer = false
+        displayLength = 0;
+        showDigits.textContent = "";
+        showDigits.textContent += 9;
+        numTwo = showDigits.textContent;
+        displayLength++;
+        
+    }
+    else if (operator !== null && numOne !== null && numTwo === null)
+    {
         answer = false
         displayLength = 0;
         showDigits.textContent = "";
