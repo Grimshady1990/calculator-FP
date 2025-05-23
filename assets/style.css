@@ -27,7 +27,7 @@ body {
     justify-content: flex-start;
     align-items: center;
 
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 #display-text {
@@ -64,6 +64,7 @@ body {
 #digit-container {
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
     gap: 50px;
     flex: auto;
     margin-left: 20px;
