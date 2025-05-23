@@ -909,7 +909,7 @@ function buttonPush0(){
         displayLength++;
         console.log(displayLength);
     }
-    else if (displayLength < 9) {
+    else if (displayLength < 8) {
         answer = false
         showDigits.textContent += 0;
         displayLength++; 
