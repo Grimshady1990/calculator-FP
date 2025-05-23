@@ -309,7 +309,7 @@ function add(n1, n2) {
     }
     else {
         let total = +n1 + +n2;
-        showDigits.textContent = total.toString().slice(0, 9); 
+        showDigits.textContent = total.toString().slice(0, 8); 
         console.log(numOne);
     }   
 } 
@@ -323,7 +323,7 @@ function sub(n1, n2) {
     }
     else {
         let total = +n1 - +n2;
-        showDigits.textContent = total.toString().slice(0, 9); 
+        showDigits.textContent = total.toString().slice(0, 8); 
         console.log(numOne);
     }
 }
@@ -337,7 +337,7 @@ function multi(n1, n2) {
     }
     else {
         let total = +n1 * +n2;
-        showDigits.textContent = total.toString().slice(0, 9); 
+        showDigits.textContent = total.toString().slice(0, 8); 
         console.log(numOne);
     }
 }
@@ -351,7 +351,7 @@ function div(n1, n2) {
     }
     else {
         let total = +n1 / +n2;
-        showDigits.textContent = total.toString().slice(0, 9); 
+        showDigits.textContent = total.toString().slice(0, 8); 
         console.log(numOne);
     }
 }
