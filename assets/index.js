@@ -955,8 +955,16 @@ function buttonPushAdd() {
         numTwo = null;
         displayLength = 0;
         operator = "+";
-        let screenAdd = document.querySelector("#screen-add");
-        screenAdd.setAttribute("style", "color: rgb(53, 207, 207); filter: drop-shadow(0 0 0.75rem rgba(53, 207, 207, 0.475)); ") 
+
+        /* ******ADD SCREEN ON******* */
+        let screenAddOn = document.querySelector("#screen-add");
+        screenAddOn.setAttribute("style", "color: rgb(53, 207, 207); filter: drop-shadow(0 0 0.75rem rgba(53, 207, 207, 0.475)); ")
+
+        /* ******EQUALS SCREEN ON******* */
+    let screenEqualsOn = document.querySelector("#screen-equals");
+    screenEqualsOn.setAttribute("style", "color: rgb(53, 207, 207); filter: drop-shadow(0 0 0.75rem rgba(53, 207, 207, 0.475)); ")
+
+
         decimal = null;
         
         return;
@@ -965,11 +973,20 @@ function buttonPushAdd() {
     answer = false;
     numOne = showDigits.textContent;
     operator = "+"
+    /* ******ADD SCREEN ON******* */
+    let screenAddOn = document.querySelector("#screen-add");
+    screenAddOn.setAttribute("style", "color: rgb(53, 207, 207); filter: drop-shadow(0 0 0.75rem rgba(53, 207, 207, 0.475)); ")
     showDigits.textContent = numOne;
     displayLength = 0;
     decimal = null;
     console.log("Operator: " + operator);
     
+    /* ******ADD SCREEN OFF******* */
+    let screenAddOff = document.querySelector("#screen-add");
+    screenAddOff.setAttribute("style", "color: rgba(16, 28, 28, 0.335)");
+    /* ******ADD SCREEN OFF******* */
+    let screenAddOff = document.querySelector("#screen-add");
+    screenAddOff.setAttribute("style", "color: rgba(16, 28, 28, 0.335)");
 }
 
 function buttonPushSub() {
