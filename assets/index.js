@@ -984,9 +984,7 @@ function buttonPushAdd() {
     /* ******ADD SCREEN OFF******* */
     let screenAddOff = document.querySelector("#screen-add");
     screenAddOff.setAttribute("style", "color: rgba(16, 28, 28, 0.335)");
-    /* ******ADD SCREEN OFF******* */
-    let screenAddOff = document.querySelector("#screen-add");
-    screenAddOff.setAttribute("style", "color: rgba(16, 28, 28, 0.335)");
+    
 }
 
 function buttonPushSub() {
