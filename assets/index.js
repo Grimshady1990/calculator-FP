@@ -955,6 +955,8 @@ function buttonPushAdd() {
         numTwo = null;
         displayLength = 0;
         operator = "+";
+        let screenAdd = document.querySelector("#screen-add");
+        screenAdd.setAttribute("style", "color: rgb(53, 207, 207); filter: drop-shadow(0 0 0.75rem rgba(53, 207, 207, 0.475)); ") 
         decimal = null;
         
         return;
