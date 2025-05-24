@@ -274,6 +274,7 @@ let screenAdd = document.querySelector("#screen-add");
 let screenSub = document.querySelector("#screen-sub");
 let screenMulti = document.querySelector("#screen-multi");
 let screenDivide = document.querySelector("#screen-divide");
+let screenBackspace = document.querySelector("#screen-backspace");
 
 const lightOff = "color: rgba(16, 28, 28, 0.335)";
 const lightOn = "color: rgb(53, 207, 207); filter: drop-shadow(0 0 0.75rem rgba(53, 207, 207, 0.475));";
@@ -377,13 +378,14 @@ showDigitsIndex = showDigits.textContent.toString().split('').slice(-1).join('')
         return;
     }
     else if (answer === false && showDigitsIndex !== "."){
-        
+        screenBackspace.setAttribute("style", lightOn);
         showDigits.textContent = showDigits.textContent.toString().split('').slice(0, -1).join('');
         displayLength--;
         console.log(displayLength);
         console.log(showDigitsIndex);
     }
     else if (answer === false && showDigitsIndex === "."){
+        screenBackspace.setAttribute("style", lightOn);
         decimal = null;
         showDigits.textContent = showDigits.textContent.toString().split('').slice(0, -1).join('');
         displayLength--;
@@ -405,6 +407,7 @@ function buttonPush1(){
         showDigits.textContent += 1;
         numTwo = showDigits.textContent;
         displayLength++;
+        screenBackspace.setAttribute("style", lightOff);
         
     }
     else if (operator !== null && numOne !== null && numTwo === null){
@@ -419,6 +422,7 @@ function buttonPush1(){
         
     }
     else if (operator === null && numOne === null && numTwo === null && decimal === ".") {
+        screenBackspace.setAttribute("style", lightOff);
         answer = false;
         //displayLength = 0;
         //showDigits.textContent = "";
@@ -429,6 +433,7 @@ function buttonPush1(){
 
     }
     else if (operator === null && numOne === null && numTwo === null && decimal !== ".") {
+        screenBackspace.setAttribute("style", lightOff);
         answer = false;
         displayLength = 0;
         //showDigits.textContent = "";
@@ -439,6 +444,7 @@ function buttonPush1(){
 
     }
     else if (displayLength < 8) {
+        screenBackspace.setAttribute("style", lightOff);
     answer = false
     showDigits.textContent += 1;
     displayLength++; 
@@ -468,6 +474,7 @@ function buttonPush2(){
         showDigits.textContent += 2;
         numTwo = showDigits.textContent;
         displayLength++;
+        screenBackspace.setAttribute("style", lightOff);
         
     }
     else if (operator !== null && numOne !== null && numTwo === null){
@@ -482,6 +489,7 @@ function buttonPush2(){
     }
     else if (operator === null && numOne === null && numTwo === null && decimal === ".") {
         answer = false;
+        screenBackspace.setAttribute("style", lightOff);
         //displayLength = 0;
         //showDigits.textContent = "";
         showDigits.textContent += 2;
@@ -491,6 +499,7 @@ function buttonPush2(){
 
     }
     else if (operator === null && numOne === null && numTwo === null && decimal !== ".") {
+        screenBackspace.setAttribute("style", lightOff);
         answer = false;
         displayLength = 0;
         //showDigits.textContent = "";
@@ -501,6 +510,7 @@ function buttonPush2(){
 
     }
     else if (displayLength < 8) {
+        screenBackspace.setAttribute("style", lightOff);
     answer = false
     showDigits.textContent += 2;
     displayLength++; 
@@ -524,6 +534,7 @@ function buttonPush3(){
         showDigits.textContent += 3;
         numTwo = showDigits.textContent;
         displayLength++;
+        screenBackspace.setAttribute("style", lightOff);
         
     }
     else if (operator !== null && numOne !== null && numTwo === null){
@@ -537,6 +548,7 @@ function buttonPush3(){
         
     }
     else if (operator === null && numOne === null && numTwo === null && decimal === ".") {
+        screenBackspace.setAttribute("style", lightOff);
         answer = false;
         //displayLength = 0;
         //showDigits.textContent = "";
@@ -547,6 +559,7 @@ function buttonPush3(){
 
     }
     else if (operator === null && numOne === null && numTwo === null && decimal !== ".") {
+        screenBackspace.setAttribute("style", lightOff);
         answer = false;
         displayLength = 0;
         //showDigits.textContent = "";
@@ -557,6 +570,7 @@ function buttonPush3(){
 
     }
     else if (displayLength < 8) {
+        screenBackspace.setAttribute("style", lightOff);
     answer = false
     showDigits.textContent += 3;
     displayLength++; 
@@ -580,6 +594,7 @@ function buttonPush4(){
         showDigits.textContent += 4;
         numTwo = showDigits.textContent;
         displayLength++;
+        screenBackspace.setAttribute("style", lightOff);
         
     }
     else if (operator !== null && numOne !== null && numTwo === null){
@@ -593,6 +608,7 @@ function buttonPush4(){
         
     }
     else if (operator === null && numOne === null && numTwo === null && decimal === ".") {
+        screenBackspace.setAttribute("style", lightOff);
         answer = false;
         //displayLength = 0;
         //showDigits.textContent = "";
@@ -603,6 +619,7 @@ function buttonPush4(){
 
     }
     else if (operator === null && numOne === null && numTwo === null && decimal !== ".") {
+        screenBackspace.setAttribute("style", lightOff);
         answer = false;
         displayLength = 0;
         //showDigits.textContent = "";
@@ -613,6 +630,7 @@ function buttonPush4(){
 
     }
     else if (displayLength < 8) {
+        screenBackspace.setAttribute("style", lightOff);
     answer = false
     showDigits.textContent += 4;
     displayLength++; 
@@ -636,6 +654,7 @@ function buttonPush5(){
         showDigits.textContent += 5;
         numTwo = showDigits.textContent;
         displayLength++;
+        screenBackspace.setAttribute("style", lightOff);
         
     }
     else if (operator !== null && numOne !== null && numTwo === null){
@@ -650,6 +669,7 @@ function buttonPush5(){
     }
     else if (operator === null && numOne === null && numTwo === null && decimal === ".") {
         answer = false;
+        screenBackspace.setAttribute("style", lightOff);
         //displayLength = 0;
         //showDigits.textContent = "";
         showDigits.textContent += 5;
@@ -660,6 +680,7 @@ function buttonPush5(){
     }
     else if (operator === null && numOne === null && numTwo === null && decimal !== ".") {
         answer = false;
+        screenBackspace.setAttribute("style", lightOff);
         displayLength = 0;
         //showDigits.textContent = "";
         showDigits.textContent += 5;
@@ -669,6 +690,7 @@ function buttonPush5(){
 
     }
     else if (displayLength < 8) {
+        screenBackspace.setAttribute("style", lightOff);
     answer = false
     showDigits.textContent += 5;
     displayLength++; 
@@ -692,6 +714,7 @@ function buttonPush6(){
         showDigits.textContent += 6;
         numTwo = showDigits.textContent;
         displayLength++;
+        screenBackspace.setAttribute("style", lightOff);
         
     }
     else if (operator !== null && numOne !== null && numTwo === null){
@@ -705,6 +728,7 @@ function buttonPush6(){
         
     }
     else if (operator === null && numOne === null && numTwo === null && decimal === ".") {
+        screenBackspace.setAttribute("style", lightOff);
         answer = false;
         //displayLength = 0;
         //showDigits.textContent = "";
@@ -715,6 +739,7 @@ function buttonPush6(){
 
     }
     else if (operator === null && numOne === null && numTwo === null && decimal !== ".") {
+        screenBackspace.setAttribute("style", lightOff);
         answer = false;
         displayLength = 0;
         //showDigits.textContent = "";
@@ -725,6 +750,7 @@ function buttonPush6(){
 
     }
     else if (displayLength < 8) {
+        screenBackspace.setAttribute("style", lightOff);
     answer = false
     showDigits.textContent += 6;
     displayLength++; 
@@ -748,6 +774,7 @@ function buttonPush7(){
         showDigits.textContent += 7;
         numTwo = showDigits.textContent;
         displayLength++;
+        screenBackspace.setAttribute("style", lightOff);
         
     }
     else if (operator !== null && numOne !== null && numTwo === null){
@@ -761,6 +788,7 @@ function buttonPush7(){
         
     }
     else if (operator === null && numOne === null && numTwo === null && decimal === ".") {
+        screenBackspace.setAttribute("style", lightOff);
         answer = false;
         //displayLength = 0;
         //showDigits.textContent = "";
@@ -771,6 +799,7 @@ function buttonPush7(){
 
     }
     else if (operator === null && numOne === null && numTwo === null && decimal !== ".") {
+        screenBackspace.setAttribute("style", lightOff);
         answer = false;
         displayLength = 0;
         //showDigits.textContent = "";
@@ -781,6 +810,7 @@ function buttonPush7(){
 
     }
     else if (displayLength < 8) {
+        screenBackspace.setAttribute("style", lightOff);
     answer = false
     showDigits.textContent += 7;
     displayLength++; 
@@ -804,6 +834,7 @@ function buttonPush8(){
         showDigits.textContent += 8;
         numTwo = showDigits.textContent;
         displayLength++;
+        screenBackspace.setAttribute("style", lightOff);
         
     }
     else if (operator !== null && numOne !== null && numTwo === null){
@@ -817,6 +848,7 @@ function buttonPush8(){
         
     }
     else if (operator === null && numOne === null && numTwo === null && decimal === ".") {
+        screenBackspace.setAttribute("style", lightOff);
         answer = false;
         //displayLength = 0;
         //showDigits.textContent = "";
@@ -827,6 +859,7 @@ function buttonPush8(){
 
     }
     else if (operator === null && numOne === null && numTwo === null && decimal !== ".") {
+        screenBackspace.setAttribute("style", lightOff);
         answer = false;
         displayLength = 0;
         //showDigits.textContent = "";
@@ -837,6 +870,7 @@ function buttonPush8(){
 
     }
     else if (displayLength < 8) {
+        screenBackspace.setAttribute("style", lightOff);
     answer = false
     showDigits.textContent += 8;
     displayLength++; 
@@ -860,7 +894,7 @@ function buttonPush9(){
         showDigits.textContent += 9;
         numTwo = showDigits.textContent;
         displayLength++;
-        
+        screenBackspace.setAttribute("style", lightOff);
     }
     else if (operator !== null && numOne !== null && numTwo === null) {
         screenEquals.setAttribute("style", lightOff);
@@ -873,6 +907,7 @@ function buttonPush9(){
         
     }
     else if (operator === null && numOne === null && numTwo === null && decimal === ".") {
+        screenBackspace.setAttribute("style", lightOff);
         answer = false;
         //displayLength = 0;
         //showDigits.textContent = "";
@@ -883,6 +918,7 @@ function buttonPush9(){
 
     }
     else if (operator === null && numOne === null && numTwo === null && decimal !== ".") {
+        screenBackspace.setAttribute("style", lightOff);
         answer = false;
         displayLength = 0;
         //showDigits.textContent = "";
@@ -893,6 +929,7 @@ function buttonPush9(){
 
     }
     else if (displayLength < 8) {
+        screenBackspace.setAttribute("style", lightOff);
     answer = false
     showDigits.textContent += 9;
     displayLength++; 
@@ -928,6 +965,7 @@ function buttonPush0(){
         console.log(displayLength);
     }
     else if (displayLength < 8) {
+        screenBackspace.setAttribute("style", lightOff);
         answer = false
         showDigits.textContent += 0;
         displayLength++; 
@@ -953,6 +991,7 @@ function buttonPushC(){
     screenAdd.setAttribute("style", lightOff);
     screenEquals.setAttribute("style", lightOff);
     screenSub.setAttribute("style", lightOff);
+    screenBackspace.setAttribute("style", lightOff);
 }
 
 function buttonPushD(){
@@ -961,6 +1000,7 @@ function buttonPushD(){
         showDigits.textContent += ".";
         displayLength++; 
         console.log(displayLength);
+        screenBackspace.setAttribute("style", lightOff);
     }
     else {
         return;
@@ -988,6 +1028,7 @@ function buttonPushAdd() {
         screenDivide.setAttribute("style", lightOff);
         screenAdd.setAttribute("style", lightOn);
         screenEquals.setAttribute("style", lightOff);
+        screenBackspace.setAttribute("style", lightOff);
         decimal = null;
         
 
@@ -1005,6 +1046,7 @@ function buttonPushAdd() {
         screenDivide.setAttribute("style", lightOff);
         screenAdd.setAttribute("style", lightOn);
         screenEquals.setAttribute("style", lightOn);
+        screenBackspace.setAttribute("style", lightOff);
         decimal = null;
         
      } else {
@@ -1017,6 +1059,7 @@ function buttonPushAdd() {
     screenDivide.setAttribute("style", lightOff);
     screenAdd.setAttribute("style", lightOn);
     screenEquals.setAttribute("style", lightOff);
+    screenBackspace.setAttribute("style", lightOff);
     showDigits.textContent = numOne;
     displayLength = 0;
     decimal = null;
@@ -1046,6 +1089,7 @@ function buttonPushSub() {
         screenDivide.setAttribute("style", lightOff);
         screenAdd.setAttribute("style", lightOff);
         screenEquals.setAttribute("style", lightOff);
+        screenBackspace.setAttribute("style", lightOff);
         decimal = null;
         
 
@@ -1063,6 +1107,7 @@ function buttonPushSub() {
         screenDivide.setAttribute("style", lightOff);
         screenAdd.setAttribute("style", lightOff);
         screenEquals.setAttribute("style", lightOn);
+        screenBackspace.setAttribute("style", lightOff);
         decimal = null;
         
      } else {
@@ -1075,6 +1120,7 @@ function buttonPushSub() {
     screenDivide.setAttribute("style", lightOff);
     screenAdd.setAttribute("style", lightOff);
     screenEquals.setAttribute("style", lightOff);
+    screenBackspace.setAttribute("style", lightOff);
     showDigits.textContent = numOne;
     displayLength = 0;
     decimal = null;
@@ -1102,6 +1148,7 @@ function buttonPushMulti() {
         screenDivide.setAttribute("style", lightOff);
         screenAdd.setAttribute("style", lightOff);
         screenEquals.setAttribute("style", lightOff);
+        screenBackspace.setAttribute("style", lightOff);
         decimal = null;
         
 
@@ -1119,6 +1166,7 @@ function buttonPushMulti() {
         screenDivide.setAttribute("style", lightOff);
         screenAdd.setAttribute("style", lightOff);
         screenEquals.setAttribute("style", lightOn);
+        screenBackspace.setAttribute("style", lightOff);
         decimal = null;
         
      } else {
@@ -1131,6 +1179,7 @@ function buttonPushMulti() {
     screenDivide.setAttribute("style", lightOff);
     screenAdd.setAttribute("style", lightOff);
     screenEquals.setAttribute("style", lightOff);
+    screenBackspace.setAttribute("style", lightOff);
     showDigits.textContent = numOne;
     displayLength = 0;
     decimal = null;
@@ -1157,6 +1206,7 @@ function buttonPushDivide() {
         screenDivide.setAttribute("style", lightOn);
         screenAdd.setAttribute("style", lightOff);
         screenEquals.setAttribute("style", lightOff);
+        screenBackspace.setAttribute("style", lightOff);
         decimal = null;
         
 
@@ -1174,6 +1224,7 @@ function buttonPushDivide() {
         screenDivide.setAttribute("style", lightOn);
         screenAdd.setAttribute("style", lightOff);
         screenEquals.setAttribute("style", lightOn);
+        screenBackspace.setAttribute("style", lightOff);
         decimal = null;
         
      } else {
@@ -1186,6 +1237,7 @@ function buttonPushDivide() {
     screenDivide.setAttribute("style", lightOn);
     screenAdd.setAttribute("style", lightOff);
     screenEquals.setAttribute("style", lightOff);
+    screenBackspace.setAttribute("style", lightOff);
     showDigits.textContent = numOne;
     displayLength = 0;
     decimal = null;
@@ -1213,6 +1265,7 @@ function buttonPushEquals() {
         screenMulti.setAttribute("style", lightOff);
         screenDivide.setAttribute("style", lightOff);
         screenAdd.setAttribute("style", lightOff);
+        screenBackspace.setAttribute("style", lightOff);
         decimal = null;
 
 
