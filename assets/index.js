@@ -269,6 +269,15 @@ let decimal = null;
 
 let answer = false;
 
+let screenEquals = document.querySelector("#screen-equals");
+let screenAdd = document.querySelector("#screen-add");
+let screenSub = document.querySelector("#screen-sub");
+let screenMulti = document.querySelector("#screen-multi");
+let screenDivide = document.querySelector("#screen-divide");
+
+const lightOff = "color: rgba(16, 28, 28, 0.335)";
+const lightOn = "color: rgb(53, 207, 207); filter: drop-shadow(0 0 0.75rem rgba(53, 207, 207, 0.475));";
+
 // CREATE a function called `operate()`.
 function operate() {
     // IF/ELSE statement that choses a operation function based on the chosen operator
@@ -401,6 +410,7 @@ function buttonPush1(){
     else if (operator !== null && numOne !== null && numTwo === null){
         answer = false;
         //displayLength = 0;
+        screenEquals.setAttribute("style", lightOff);
         showDigits.textContent = "";
         showDigits.textContent += 1;
         numTwo = showDigits.textContent;
@@ -461,6 +471,7 @@ function buttonPush2(){
         
     }
     else if (operator !== null && numOne !== null && numTwo === null){
+        screenEquals.setAttribute("style", lightOff);
         answer = false
         displayLength = 0;
         showDigits.textContent = "";
@@ -516,6 +527,7 @@ function buttonPush3(){
         
     }
     else if (operator !== null && numOne !== null && numTwo === null){
+        screenEquals.setAttribute("style", lightOff);
         answer = false
         displayLength = 0;
         showDigits.textContent = "";
@@ -571,6 +583,7 @@ function buttonPush4(){
         
     }
     else if (operator !== null && numOne !== null && numTwo === null){
+        screenEquals.setAttribute("style", lightOff);
         answer = false
         displayLength = 0;
         showDigits.textContent = "";
@@ -626,6 +639,7 @@ function buttonPush5(){
         
     }
     else if (operator !== null && numOne !== null && numTwo === null){
+        screenEquals.setAttribute("style", lightOff);
         answer = false
         displayLength = 0;
         showDigits.textContent = "";
@@ -681,6 +695,7 @@ function buttonPush6(){
         
     }
     else if (operator !== null && numOne !== null && numTwo === null){
+        screenEquals.setAttribute("style", lightOff);
         answer = false
         displayLength = 0;
         showDigits.textContent = "";
@@ -736,6 +751,7 @@ function buttonPush7(){
         
     }
     else if (operator !== null && numOne !== null && numTwo === null){
+        screenEquals.setAttribute("style", lightOff);
         answer = false
         displayLength = 0;
         showDigits.textContent = "";
@@ -791,6 +807,7 @@ function buttonPush8(){
         
     }
     else if (operator !== null && numOne !== null && numTwo === null){
+        screenEquals.setAttribute("style", lightOff);
         answer = false
         displayLength = 0;
         showDigits.textContent = "";
@@ -845,8 +862,8 @@ function buttonPush9(){
         displayLength++;
         
     }
-    else if (operator !== null && numOne !== null && numTwo === null)
-    {
+    else if (operator !== null && numOne !== null && numTwo === null) {
+        screenEquals.setAttribute("style", lightOff);
         answer = false
         displayLength = 0;
         showDigits.textContent = "";
@@ -891,6 +908,7 @@ function buttonPush0(){
         return;
     }
     else if (operator !== null && numOne !== null && numTwo === null){
+        screenEquals.setAttribute("style", lightOff);
         answer = false
         //displayLength = 0;
         showDigits.textContent = "";
@@ -930,6 +948,11 @@ function buttonPushC(){
     operator = null;
     decimal = null;
     displayLength = 0;
+    screenMulti.setAttribute("style", lightOff);
+    screenDivide.setAttribute("style", lightOff);
+    screenAdd.setAttribute("style", lightOff);
+    screenEquals.setAttribute("style", lightOff);
+    screenSub.setAttribute("style", lightOff);
 }
 
 function buttonPushD(){
@@ -947,7 +970,12 @@ function buttonPushD(){
 console.log("Operator: " + operator);
 function buttonPushAdd() {
 
-    if (operator !== null && numTwo !== null){
+        if (numOne === null && numTwo === null) {
+    return;
+
+    }
+
+   else if (operator !== null && numTwo !== null && operator === "="){
         answer = true;
         numTwo = showDigits.textContent;
         operate();
@@ -955,105 +983,214 @@ function buttonPushAdd() {
         numTwo = null;
         displayLength = 0;
         operator = "+";
-
-        /* ******ADD SCREEN ON******* */
-        let screenAddOn = document.querySelector("#screen-add");
-        screenAddOn.setAttribute("style", "color: rgb(53, 207, 207); filter: drop-shadow(0 0 0.75rem rgba(53, 207, 207, 0.475)); ")
-
-        /* ******EQUALS SCREEN ON******* */
-    let screenEqualsOn = document.querySelector("#screen-equals");
-    screenEqualsOn.setAttribute("style", "color: rgb(53, 207, 207); filter: drop-shadow(0 0 0.75rem rgba(53, 207, 207, 0.475)); ")
-
-
+        screenSub.setAttribute("style", lightOff);
+        screenMulti.setAttribute("style", lightOff);
+        screenDivide.setAttribute("style", lightOff);
+        screenAdd.setAttribute("style", lightOn);
+        screenEquals.setAttribute("style", lightOff);
         decimal = null;
         
-        return;
 
     }
+    else if (operator !== null && numTwo !== null){
+        answer = true;
+        numTwo = showDigits.textContent;
+        operate();
+        numOne = showDigits.textContent;
+        numTwo = null;
+        displayLength = 0;
+        operator = "+";
+        screenSub.setAttribute("style", lightOff);
+        screenMulti.setAttribute("style", lightOff);
+        screenDivide.setAttribute("style", lightOff);
+        screenAdd.setAttribute("style", lightOn);
+        screenEquals.setAttribute("style", lightOn);
+        decimal = null;
+        
+     } else {
     answer = false;
     numOne = showDigits.textContent;
     operator = "+"
-    /* ******ADD SCREEN ON******* */
-    let screenAddOn = document.querySelector("#screen-add");
-    screenAddOn.setAttribute("style", "color: rgb(53, 207, 207); filter: drop-shadow(0 0 0.75rem rgba(53, 207, 207, 0.475)); ")
+    
+    screenSub.setAttribute("style", lightOff);
+    screenMulti.setAttribute("style", lightOff);
+    screenDivide.setAttribute("style", lightOff);
+    screenAdd.setAttribute("style", lightOn);
+    screenEquals.setAttribute("style", lightOff);
     showDigits.textContent = numOne;
     displayLength = 0;
     decimal = null;
     console.log("Operator: " + operator);
+        }
     
-    /* ******ADD SCREEN OFF******* */
-    let screenAddOff = document.querySelector("#screen-add");
-    screenAddOff.setAttribute("style", "color: rgba(16, 28, 28, 0.335)");
+
+    
     
 }
 
 function buttonPushSub() {
-    if (operator !== null && numTwo !== null){
-        numTwo = showDigits.textContent;
+        if (numOne === null && numTwo === null) {
+    return;
+
+    }
+    else if (operator !== null && numTwo !== null && operator === "="){
         answer = true;
+        numTwo = showDigits.textContent;
         operate();
         numOne = showDigits.textContent;
         numTwo = null;
         displayLength = 0;
         operator = "-";
+        screenSub.setAttribute("style", lightOn);
+        screenMulti.setAttribute("style", lightOff);
+        screenDivide.setAttribute("style", lightOff);
+        screenAdd.setAttribute("style", lightOff);
+        screenEquals.setAttribute("style", lightOff);
         decimal = null;
         
-        return;
 
     }
+    else if (operator !== null && numTwo !== null){
+        answer = true;
+        numTwo = showDigits.textContent;
+        operate();
+        numOne = showDigits.textContent;
+        numTwo = null;
+        displayLength = 0;
+        operator = "-";
+        screenSub.setAttribute("style", lightOn);
+        screenMulti.setAttribute("style", lightOff);
+        screenDivide.setAttribute("style", lightOff);
+        screenAdd.setAttribute("style", lightOff);
+        screenEquals.setAttribute("style", lightOn);
+        decimal = null;
+        
+     } else {
+    answer = false;
     numOne = showDigits.textContent;
     operator = "-"
+    
+    screenSub.setAttribute("style", lightOn);
+    screenMulti.setAttribute("style", lightOff);
+    screenDivide.setAttribute("style", lightOff);
+    screenAdd.setAttribute("style", lightOff);
+    screenEquals.setAttribute("style", lightOff);
     showDigits.textContent = numOne;
     displayLength = 0;
     decimal = null;
-    console.log(numOne);
-}
+    console.log("Operator: " + operator);
+        }
+    }
 
 function buttonPushMulti() {
 
-    if (operator !== null && numTwo !== null){
-        numTwo = showDigits.textContent;
+        if (numOne === null && numTwo === null) {
+    return;
+
+    }
+
+    else if (operator !== null && numTwo !== null && operator === "="){
         answer = true;
+        numTwo = showDigits.textContent;
         operate();
         numOne = showDigits.textContent;
         numTwo = null;
         displayLength = 0;
         operator = "*";
+        screenSub.setAttribute("style", lightOff);
+        screenMulti.setAttribute("style", lightOn);
+        screenDivide.setAttribute("style", lightOff);
+        screenAdd.setAttribute("style", lightOff);
+        screenEquals.setAttribute("style", lightOff);
         decimal = null;
         
-        return;
 
     }
-
+    else if (operator !== null && numTwo !== null){
+        answer = true;
+        numTwo = showDigits.textContent;
+        operate();
+        numOne = showDigits.textContent;
+        numTwo = null;
+        displayLength = 0;
+        operator = "*";
+        screenSub.setAttribute("style", lightOff);
+        screenMulti.setAttribute("style", lightOn);
+        screenDivide.setAttribute("style", lightOff);
+        screenAdd.setAttribute("style", lightOff);
+        screenEquals.setAttribute("style", lightOn);
+        decimal = null;
+        
+     } else {
+    answer = false;
     numOne = showDigits.textContent;
     operator = "*"
+    
+    screenSub.setAttribute("style", lightOff);
+    screenMulti.setAttribute("style", lightOn);
+    screenDivide.setAttribute("style", lightOff);
+    screenAdd.setAttribute("style", lightOff);
+    screenEquals.setAttribute("style", lightOff);
     showDigits.textContent = numOne;
     displayLength = 0;
     decimal = null;
-    console.log(numOne);
+    console.log("Operator: " + operator);
+        }
 }
 
 function buttonPushDivide() {
-    if (operator !== null && numTwo !== null){
-        numTwo = showDigits.textContent;
+    if (numOne === null && numTwo === null) {
+    return;
+
+    }
+    
+    else if (operator !== null && numTwo !== null && operator === "="){
         answer = true;
+        numTwo = showDigits.textContent;
         operate();
         numOne = showDigits.textContent;
         numTwo = null;
         displayLength = 0;
         operator = "/";
+        screenSub.setAttribute("style", lightOff);
+        screenMulti.setAttribute("style", lightOff);
+        screenDivide.setAttribute("style", lightOn);
+        screenAdd.setAttribute("style", lightOff);
+        screenEquals.setAttribute("style", lightOff);
         decimal = null;
         
-        return;
 
     }
-
+    else if (operator !== null && numTwo !== null){
+        answer = true;
+        numTwo = showDigits.textContent;
+        operate();
+        numOne = showDigits.textContent;
+        numTwo = null;
+        displayLength = 0;
+        operator = "/";
+        screenSub.setAttribute("style", lightOff);
+        screenMulti.setAttribute("style", lightOff);
+        screenDivide.setAttribute("style", lightOn);
+        screenAdd.setAttribute("style", lightOff);
+        screenEquals.setAttribute("style", lightOn);
+        decimal = null;
+        
+     } else {
+    answer = false;
     numOne = showDigits.textContent;
     operator = "/"
+    
+    screenSub.setAttribute("style", lightOff);
+    screenMulti.setAttribute("style", lightOff);
+    screenDivide.setAttribute("style", lightOn);
+    screenAdd.setAttribute("style", lightOff);
+    screenEquals.setAttribute("style", lightOff);
     showDigits.textContent = numOne;
     displayLength = 0;
     decimal = null;
-    console.log(numOne);
+    console.log("Operator: " + operator);
+        }
 }
 
 function buttonPushEquals() {
@@ -1071,7 +1208,13 @@ function buttonPushEquals() {
         numTwo = null;
         displayLength = 0;
         operator = "=";
+        screenSub.setAttribute("style", lightOff);
+        screenEquals.setAttribute("style", lightOn);
+        screenMulti.setAttribute("style", lightOff);
+        screenDivide.setAttribute("style", lightOff);
+        screenAdd.setAttribute("style", lightOff);
         decimal = null;
+
 
         console.log("op =" + operator);
 
@@ -1084,6 +1227,9 @@ function buttonPushEquals() {
 
     numOne = showDigits.textContent;
     operator = "=";
+    
+
+    screenEquals.setAttribute("style", lightOn);
     showDigits.textContent = numOne;
     displayLength = 0;
     decimal = null;
