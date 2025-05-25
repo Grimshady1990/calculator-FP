@@ -1,155 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
     <title>Calculator</title>
     <style>
-@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
-</style>
-
+        @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+    </style>
 </head>
+
 <body>
-
-    
-
     <div id="main-container">
-
         <div id="header">
-        <h1>FRANKULATOR 5000</h1>
-    </div>
-        
+            <h1>FRANKULATOR 5000</h1>
+        </div>
+
         <div id="display">
             <h1 id="back-layer-text">88888888</h1>
             <h1 id="display-text"></h1>
 
-        <div id="screen-operators">
-            <span id="screen-add" class="screen-operators-group">+</span>
-            <span id="screen-sub" class="screen-operators-group">-</span>
-            <span id="screen-multi" class="screen-operators-group">×</span>
+            <div id="screen-operators">
+                <span id="screen-add" class="screen-operators-group">+</span>
+                <span id="screen-sub" class="screen-operators-group">-</span>
+                <span id="screen-multi" class="screen-operators-group">×</span>
+            </div>
 
+            <div id="screen-operators2">
+                <span id="screen-divide" class="screen-operators-group">÷</span>
+                <span id="screen-equals" class="screen-operators-group">=</span>
+                <span id="screen-backspace" class="screen-operators-group">↵</span>
+            </div>
         </div>
-        <div id="screen-operators2">
-            <span id="screen-divide" class="screen-operators-group">÷</span>
-            <span id="screen-equals" class="screen-operators-group">=</span>
-            <span id="screen-backspace" class="screen-operators-group">↵</span>
-        </div>
-        
-        </div>
+
         <div id="operators-digits">
-        <div id="digit-container">
-            <div class="digits">
-                <button id="cancel" class="button2">
-                    <span class="shadow3"></span>
-                    <span class="edge3"></span>
-                    <span class="front3"> AC </span>
-                </button>
-                <button id="backspace" class="button2">
-                <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <span class="front"> C </span>
+            <div id="digit-container">
+                <div class="digits">
+                    <button id="cancel" class="button2">
+                        <span class="shadow3"></span>
+                        <span class="edge3"></span>
+                        <span class="front3"> AC </span>
+                    </button>
+                    <button id="backspace" class="button2">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front"> C </span>
 
-            </div>
-            <div class="digits">
-                <button id="one" class="button">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <span class="front"> 1 </span>
-                </button>
-                <button id="two" class="button">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <span class="front"> 2 </span>
-                </button>
-                <button id="three" class="button">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <span class="front"> 3 </span>
-                </button>
-                <button id="add" class="button">
-                <span class="shadow2"></span>
-                    <span class="edge2"></span>
-                    <span class="front2"> + </span>
-                </button>
-            </div>
-            <div class="digits">
-                <button id="four" class="button">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <span class="front"> 4 </span>
-                </button>
-                <button id="five" class="button">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <span class="front"> 5 </span>
-                </button>
-                <button id="six" class="button">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <span class="front"> 6 </span>
-                </button>
-                <button id="sub" class="button">
-                <span class="shadow2"></span>
-                    <span class="edge2"></span>
-                    <span class="front2"> - </span>
-            </button>
-            </div>
-            <div class="digits">
-                <button id="seven" class="button">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <span class="front"> 7 </span>
-                </button>
-                <button id="eight" class="button">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <span class="front"> 8 </span>
-                </button>
-                <button id="nine" class="button">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <span class="front"> 9 </span>
-                </button>
-                <button id="multi" class="button">
-                <span class="shadow2"></span>
-                    <span class="edge2"></span>
-                    <span class="front2"> × </span>
-            </button>
-            </div>
-            <div class="digits">
-                <button id="decimal" class="button">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <span class="front"> . </span>
-                </button>
-                <button id="zero" class="button">
-                    <span class="shadow"></span>
-                    <span class="edge"></span>
-                    <span class="front"> 0 </span>
+                </div>
+                <div class="digits">
+                    <button id="one" class="button">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front"> 1 </span>
+                    </button>
+                    <button id="two" class="button">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front"> 2 </span>
+                    </button>
+                    <button id="three" class="button">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front"> 3 </span>
+                    </button>
+                    <button id="add" class="button">
+                        <span class="shadow2"></span>
+                        <span class="edge2"></span>
+                        <span class="front2"> + </span>
+                    </button>
+                </div>
+                <div class="digits">
+                    <button id="four" class="button">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front"> 4 </span>
+                    </button>
+                    <button id="five" class="button">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front"> 5 </span>
+                    </button>
+                    <button id="six" class="button">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front"> 6 </span>
+                    </button>
+                    <button id="sub" class="button">
+                        <span class="shadow2"></span>
+                        <span class="edge2"></span>
+                        <span class="front2"> - </span>
+                    </button>
+                </div>
+                <div class="digits">
+                    <button id="seven" class="button">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front"> 7 </span>
+                    </button>
+                    <button id="eight" class="button">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front"> 8 </span>
+                    </button>
+                    <button id="nine" class="button">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front"> 9 </span>
+                    </button>
+                    <button id="multi" class="button">
+                        <span class="shadow2"></span>
+                        <span class="edge2"></span>
+                        <span class="front2"> × </span>
+                    </button>
+                </div>
+                <div class="digits">
+                    <button id="decimal" class="button">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front"> . </span>
+                    </button>
+                    <button id="zero" class="button">
+                        <span class="shadow"></span>
+                        <span class="edge"></span>
+                        <span class="front"> 0 </span>
 
-                </button>
-                <button id="equals" class="button">
-                <span class="shadow2"></span>
-                    <span class="edge2"></span>
-                    <span class="front2"> = </span>
-                </button>
-                <button id="divide" class="button">
-                <span class="shadow2"></span>
-                    <span class="edge2"></span>
-                    <span class="front2"> ÷ </span>
-            </button>
-                
+                    </button>
+                    <button id="equals" class="button">
+                        <span class="shadow2"></span>
+                        <span class="edge2"></span>
+                        <span class="front2"> = </span>
+                    </button>
+                    <button id="divide" class="button">
+                        <span class="shadow2"></span>
+                        <span class="edge2"></span>
+                        <span class="front2"> ÷ </span>
+                    </button>
+
+                </div>
             </div>
         </div>
-        </div>
 
-    
-    <script src="assets/index.js"></script>
+
+        <script src="assets/index.js"></script>
 </body>
+
 </html>
-
-
-
-
-
