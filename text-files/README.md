@@ -1,6 +1,6 @@
 # The Frankulator 5000 🧮
 
-Welcome to **The Frankulator 5000** — a delightfully springy, slightly sarcastic, and unapologetically retro calculator, handcrafted as the final project for [The Odin Project Foundations Course](https://www.theodinproject.com/).
+Welcome to **The Frankulator 5000** — a delightfully springy, and unapologetically retro calculator, handcrafted as the final project for [The Odin Project Foundations Course](https://www.theodinproject.com/).
 
 ## 📱 Optimized for Humans (and Their Devices)
 
